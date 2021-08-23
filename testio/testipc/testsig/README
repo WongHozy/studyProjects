@@ -1,0 +1,8 @@
+信号
+
+int kill(pid_t pid, int sig);
+int raise(int sig);
+void abort(void);
+unsigned int alarm(unsigned int seconds);
+int setitimer(int which, const struct itimerval *new_value, struct itimerval *old_value);
+

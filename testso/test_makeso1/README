@@ -1,0 +1,8 @@
+显式调用动态链接库，在函数中设置引用的so库路径
+
+g++ -fPIC -shared test.cpp -o libtest_1.so
+
+g++ -fPIC -shared test.cpp -o libtest_2.so
+
+g++ -g -Wl,--no-as-needed -ldl main.cpp -rdynamic -o main.out
+

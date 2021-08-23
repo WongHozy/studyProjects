@@ -1,0 +1,19 @@
+OBJS = add.o sub.o div.o
+TARGET = main.out
+CC = g++
+
+$(TARGET):main.c libmymath.so
+	$(CC) $^ -o $@
+	echo "build2 main.out finish"
+libmymath.so:$(OBJS)
+	$(CC) -shared $^ -o $@
+	echo "build2 libmymath.so finish"
+
+%.o:%.c
+	$(CC) -c -fpic $< -o $@
+	echo "build2" $< "finish"
+
+.PHONY:clean
+clean:
+	rm $(OBJS) libmymath.so main.out
+

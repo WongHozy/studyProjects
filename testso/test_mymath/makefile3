@@ -1,0 +1,20 @@
+SRC = $(wildcard *.c)    #多了main.c
+OBJS = $(patsubst %.c, %.o, $(SRC))    #多了main.o
+TARGET = main.out
+CC = g++
+
+$(TARGET):main.c libmymath.so
+	$(CC) $^ -o $@
+	echo "build3" $@ "finish"
+libmymath.so:$(OBJS)
+	$(CC) -shared $^ -o $@
+	echo "build3 libmymath.so finish"
+
+%.o:%.c
+	$(CC) -c -fpic $< -o $@
+	echo "build3" $< "finish"
+
+.PHONY:clean
+clean:
+	rm -rf $(OBJS) libmymath.so $(TARGET)
+

@@ -1,0 +1,6 @@
+守护进程
+
+在 /tmp/timelog.txt 每隔1秒打印时间
+
+ps -ef | grep a.out
+kill thisprocess

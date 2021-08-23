@@ -1,0 +1,12 @@
+
+ShareLib:
+gcc main.c -o main_share
+
+StaticLib:
+gcc main.c -o main_static -static
+
+
+生成文件:
+main_share      8.4K
+main_static     845K
+

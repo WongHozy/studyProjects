@@ -1,0 +1,13 @@
+
+make_so:
+	在Winodws平台使用VS创建
+
+testso:
+	test_mymath: 隐式调用so文件，需要设置引用路径；makefile,makefile2,makefile3 学习makefile语法
+	test_make*: 显示调用so文件，在函数中设置路径
+
+testa:
+	调用a文件、.h文件
+
+
+
