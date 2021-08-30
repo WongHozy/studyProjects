@@ -4,6 +4,11 @@
 
 #define SIZE 0x100000
 
+/* 线程属性 pthread_attr_t
+ * 
+ */
+
+
 void *th_fun(void *arg)
 {
 /* fork
